@@ -1,5 +1,5 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
 
   "name": "Best Buy TLC calendar import",
   "description": "Import the calendar from mytlc.bestbuy.com to Google calendar",
