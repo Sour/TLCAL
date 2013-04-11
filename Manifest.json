@@ -7,12 +7,12 @@
   "content_scripts": [
     {
       "matches": ["https://mytlc.bestbuy.com/etm/time/timesheet/etmTnsMonth.jsp"],
-      "js": ["jparse.js"]
+      "js": ["jquery.js", "jparse.js"]
     }
   ],
   
   "permissions": [
-    "https://mytlc.bestbuy.com/*"
+	"https://mytlc.bestbuy.com/etm/time/timesheet/etmTnsMonth.jsp"
   ],
   "browser_action": {
     "default_icon": "icon.png",
