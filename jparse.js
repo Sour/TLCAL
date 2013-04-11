@@ -1,3 +1,5 @@
 var data = $('span.calMonthTitle').html();
-alert("The month is " + data);
-console.log(data);
+var year = $('span.calyeartitle').html();
+alert("The month is " + data + ' of ' + year);
+console.log(data + ' ' + year);
+
