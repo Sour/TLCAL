@@ -2,7 +2,7 @@
 var year = $('span.calyeartitle').text();
 var work = $('td.calendarCellRegularPast:first').text();
 console.log($('td.calendarCellRegularPast').text());
-console.log($('td.calendarCellRegularPast').nextAll().text());
+console.log($('tbody').children().text());
 console.log($('td.calendarCellRegularFuture').text());
 console.log($('td.calendarCellRegularFuture').nextAll().text());
 	
