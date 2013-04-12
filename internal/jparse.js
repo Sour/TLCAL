@@ -20,6 +20,11 @@ function Date(subject,startDate, startTime, endDate, endTime,allDayEvent,descrip
 	this.boolPrivate = boolPrivate;
 }
 
+var getShiftStart = function(parseDay){
+	console.log(parseDay.substring(3,17));
+	return parseDay.substring(3,17);
+}
+
 var formatDates = function(){
 	/* This is something i will not be able to do without the website being up
 	the plan will be to grab things peice by piece and sort them into objects.
@@ -107,3 +112,4 @@ var getMonth = function(){
 getMonth();
 initDates();
 splitDays();
+getShiftStart(parseArray[0]);
