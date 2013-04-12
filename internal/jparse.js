@@ -6,7 +6,7 @@ var firstDate = 00;
 var month = 0;
 var parse = null;
 var parseArray = [];
-var daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+var daysPerMonth = [00, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 function Date(subject,startDate, startTime, endDate, endTime,allDayEvent,description,location,boolPrivate){
 	this.subject = subject;
@@ -29,9 +29,10 @@ var formatDates = function(){
 
 var toArray = function (){
 	try{
-		for(int i = 0; i < 14; i++){
-		//tlc down now so all of this is made up ... 0's are the length from date i.e. (07 08:00am to 04:00pm 00359xxxxxxxx)
-			parseArray[i] = parse.substring((i * (00 0000 0 0000 00 000 00000000).length), (00 0000 0 0000 00 000 00000000).length);
+		for(var i = 0; i < (parse.length / 35); i++){
+		// (0111:00AM-07:00PML-000359-DEPT50700)
+			parseArray[i] = parse.substring((i * 35), 35);
+			console.log("debug - creating array");
 		}
 	}catch(err){
 		console.log("Error in creating array, please check for accuracy");
@@ -43,14 +44,14 @@ var initDates = function(){
 	var parseCurrent = ($('td.calendarCellRegularCurrent').text()).replace(/\s+/g,"");
 	var parseFuture = ($('td.calendarCellRegularFuture').text()).replace(/\s+/g,"");
 	
-	if(firstDate === 00 && tempParsePast != null){
-		firstDate = tempParsePast.substring(0,2);
+	if(firstDate === 00 && parsePast.length > 0){
+		firstDate = Number(parsePast.substring(0,2));
 		if(daysPerMonth[month] < (firstDate + 13)){
 			console.log("Next month needs to be loaded");
 		}
 		parse = parsePast + parseCurrent + parseFuture;
 	}else{
-		firstDate = tempParseCurrent.substring(0,2);		
+		firstDate = Number(parseCurrent.substring(0,2));		
 		if(daysPerMonth[month] < (firstDate + 13)){
 			console.log("Next month needs to be loaded");
 		}
@@ -103,3 +104,4 @@ var getMonth = function(){
 
 getMonth();
 initDates();
+toArray();

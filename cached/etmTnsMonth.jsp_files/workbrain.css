@@ -1,0 +1,793 @@
+.tabText 
+{
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 16pt;
+	color			: white;
+}
+.tabTextActive
+{
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 16pt;
+	color			: Gold;
+	text-transform :  uppercase;
+}
+.loggedInUser
+{
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 10pt;
+	font-weight		: bold;
+	color			: white;
+}
+.pageMessageText
+{
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 10pt;
+	font-weight		: bold;
+	color			: white;
+}
+.contentText
+{
+	font-family		: Arial;
+	font-size		: 8pt;
+	color			: black;
+}
+.buttonText 
+{
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 16pt;
+	color			: MidnightBlue;
+}
+
+.calWeekDayHeader
+{
+	color			: navy;
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 9pt;
+	font-weight		: normal;
+	text-transform	: uppercase;
+	background-color: #ffcc00;
+
+}
+
+
+.calDateToday		
+{
+	color			: red;
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+	font-weight		: bold;
+}
+
+
+.calDateHilite		
+{
+	color			: red;
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+	font-weight		: bold;
+}
+
+
+.calDateNormal		
+{
+	color			: red;
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+}
+
+.calDateOutOfScope		
+{
+	color			: gray;
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+}
+
+.calCellFineData		
+{
+	color			: black;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+}
+
+.calCellData		
+{
+	color			: black;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+}
+
+.calTimeNotch		
+{
+	color			: red;
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+	white-space		: nowrap;
+}
+
+.calTD-ShiftExists		
+{
+	background-color: #d7ffde;
+}
+
+
+.calTD-NoShift			
+{
+	background-color: #d5f0ff;
+}
+
+.calTD-LTA			
+{
+	background-color: #fff29b;
+}
+
+.calTD-OutOfScope	
+{
+	background-color: whitesmoke;
+}
+
+.calMonthTitle
+{
+	padding-left	: 5px;
+	color			: #ffdf2b;
+	font-size		: 14pt;
+	font-family		: verdana;
+}
+
+.calYearTitle
+{
+	color			: #ffdf2b;
+	font-size		: 11pt;
+	font-family		: verdana;
+}
+
+.calTitle
+{
+	color			: white;
+	font-size		: 14pt;
+	font-family		: verdana;
+}
+
+.buttonNavigationText           {color: Navy;	font-size: 14pt; font-family: Trebuchet MS, Verdana; cursor: pointer; text-align: center; white-space: nowrap; text-decoration: none; cursor: pointer}
+.buttonNavigationTextDisabled   {color: #ABBFD8;font-size: 14pt; font-family: Trebuchet MS, Verdana; cursor: default; text-align: center; white-space: nowrap; text-decoration: none;}
+
+.TD-dataBlockRowEven
+{
+	background-color: #d7ebff;
+}
+
+.TD-dataBlockRowOdd{
+	background-color: whitesmoke;
+}
+
+.TD-dataBlockRowHeader
+{
+	color			: navy;
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 9pt;
+	font-weight		: normal;
+	text-transform	: uppercase;
+	background-color: #ffcc00;
+
+}
+
+.datarowContent		
+{
+	color			: black;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+}
+
+.datarowContentLarge
+{
+	color			: black;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 10pt;
+	padding			: 3px;
+}
+
+.datarowContentPadded		
+{
+	color			: black;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+	padding			: 3px;
+}
+
+.pageTitle
+{
+	color			: white;
+	font-size		: 14pt;
+	font-family		: verdana;
+}
+
+.pageTitleSmall
+{
+	color			: white;
+	font-size		: 11pt;
+	font-family		: verdana;
+}
+
+.pageTitleHilite
+{
+	color			: #ffdf2b;
+	font-size		: 14pt;
+	font-family		: verdana;
+}
+
+.MSGListRowEven
+{
+	background-color: #d7ebff;
+	height			: 48px;
+}
+
+.MSGListRowOdd{
+	background-color: whitesmoke;
+	height			: 48px;
+}
+
+.MSGreadTable {
+	background-color: #d7ebff;
+	border			: white;
+}
+
+.MSGinputBoxReadOnly {
+	background-color: #f0faff;
+	font-family		: Verdana, Arial;
+	font-size		: 9pt;
+	color			: black;
+}
+
+.MSGinputBox {
+	background-color: #ffffcc;
+	font-family		: Verdana, Arial;
+	font-size		: 9pt;
+	color			: navy;
+}
+
+.newMessages {
+	font-family		: Trebuchet MS, Arial;
+	font-size		: 14pt;
+	color			: #bf0000;
+	font-weight		: bold;
+}
+
+.htmlButton {
+	cursor			: pointer;
+	font-family		: Trebuchet MS, Arial;
+	font-size		: 14pt;
+	color			: navy;
+	font-weight		: normal;
+	background-color: #8ECBFD;
+	border			: medium outset;
+}
+
+.shiftTradeShiftName
+{
+	color			: navy;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+	font-weight		: bold;
+}
+
+.shiftTradeShiftTime
+{
+	color			: black;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+}
+
+.shiftTradeListAction
+{
+	color			: white;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+	font-weight		: bold;
+}
+
+.shiftTradePostAction
+{
+	color			: red;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+	font-weight		: bold;
+}
+
+.shiftTradeListing
+{
+	border			: 2px outset;
+	border-color	: #8ECBFD;
+	background-color: #8ECBFD;
+	cursor			: pointer;	
+}
+
+.shiftTradePost
+{
+	border			: 2px outset;
+	border-color	: #d7ffde;
+	background-color: #d7ffde;
+	cursor			: pointer;
+}
+
+.shiftTradePostRemoval
+{
+	border			: 2px outset;
+	border-color	: #ccccff;
+	background-color: #ccccff;
+	cursor			: pointer;
+}
+
+.shiftTradePostFutureShift {
+	border			: 2px outset;
+	border-color	: #ccecff;
+	background-color: #ccecff;
+	cursor			: pointer;
+}
+
+.communicatorMessage
+{
+	color			: navy;
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 14pt;
+	font-weight		: normal;
+	margin-top		:20px;
+}
+.msgListNew
+{
+	color			: blue;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+}
+.msgListOld
+{
+	color			: black;
+	font-family		: Arial, Trebuchet MS, Verdana, Arial;
+	font-size		: 8pt;
+}
+
+.clocksMessage
+{
+	color			: navy;
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 14pt;
+	font-weight		: normal;
+	margin-top		: 20px;
+}
+    .calendarDateCurrent {
+        color           : white;
+        font-weight     : bold;
+        font-size       : 8pt;
+        font-family     : arial
+    }
+    .calendarDateNormal {
+        color           : red;
+        font-weight     : normal ;
+        font-size       : 8pt;
+        font-family     : arial
+    }
+	.calendarCellRegularCurrent {
+        border				: 2px outset;
+        color               : white;
+		background-color 	: #fcaaa0;
+        border-color        : #fcaaa0;
+		font-family			: arial;
+		font-size			: 7pt;
+		text-align     		: center;
+		text-decoration		: none;
+        cursor              : pointer;
+	}
+	.calendarCellRegularPast {
+		border				: 2px outset;
+        color               : navy;
+		border-color		: #d7ffde;
+		background-color	: #d7ffde;
+		font-family			: arial;
+		font-size			: 7pt;
+		text-align			: center;
+		cursor				: pointer;
+		text-decoration		: none;
+	}
+	.calendarCellRegularFuture {
+		border				: 2px outset;
+		border-color		: #fef196;
+		background-color	: #fef196;
+        color               : navy;
+		cursor				: pointer;
+		font-family			: arial;
+		font-size			: 7pt;
+		text-align			: center;
+		text-decoration		: none;
+	}
+	.calendarCellVacation {
+        border				: 2px outset;
+        color               : red;
+		font-family		 	: arial;
+		font-size		 	: 8pt;
+		text-align		 	: center;
+		cursor			 	: pointer;
+		text-decoration		: none;
+        font-weight         : bold;
+        padding-left        : 2px;
+        padding-right       : 2px;
+	}
+	.calendarCellHoliday {
+		font-family			: arial;
+		font-size			: 8pt;
+		text-align			: center;
+		cursor				: pointer;
+		text-decoration		: none;
+        color               : red;
+        font-weight         : bold;
+        padding-left        : 2px;
+        padding-right       : 2px;
+	}
+	.calendarCellUnknown {
+        border				: 2px outset;
+		background-color 	: white;
+		border-color 		: white;
+		font-family			: arial;
+		font-size			: 7pt;
+		text-align			: center;
+		cursor				: pointer;
+		text-decoration		: none;
+	}
+	.calendarTextShiftName {
+		font-family			: arial;
+		color				: black;
+		font-weight			: bold;
+		text-decoration		: none;
+	}
+	.calendarTextShiftTime {
+		font-family			: arial;
+		color				: navy;
+		font-weight			: normal;
+		text-decoration		: none;
+	}
+    .calendarTextHolidayName {
+        font-size           : 8pt;
+		font-family			: arial;
+		color				: white;
+		font-weight			: bold;
+		text-decoration		: none;
+        background-color    : red;
+	}
+	.calendarColWeekend {
+		/* background-color	: AliceBlue; */
+		background-color	: #DCE8F5;
+	}
+	
+	.calendarColWeekday {
+		background-color	: #DCE8F5;
+	}
+	
+	
+	.russBenefitDetail {
+		color				: Navy;
+		font-family			: trebuchet ms, verdana, arial;
+		font-size			: 10pt;
+		font-weight			: bold;
+	}
+	.russBenefitText {
+		color				: black;
+		font-family			: verdana, arial;
+		font-size			: 8pt;
+	}
+	.russBenefitTitle {
+		color				: Black;
+		font-family			: trebuchet ms, verdana, arial;
+		font-size			: 14pt;
+		font-weight			: normal;
+	}
+	
+	
+	
+	
+	
+	.dataRowBgOdd {
+		background-color	: AliceBlue;
+	}
+	
+	.dataRowBgEven {
+		background-color	: white;
+	}
+	
+	.russInfoDataText
+	{
+		color			: black;
+		font-family		: Verdana, Arial;
+		font-size		: 8pt;
+		font-weight		: normal;
+	}
+	
+	.russInfoDataHeading
+	{
+		color			: navy;
+		font-family		: Verdana, Arial;
+		font-size		: 8pt;
+		font-weight		: bold;
+		text-align		: right;
+	}
+	
+	.tableHeader
+	{
+		color			: navy;
+		font-family		: Trebuchet MS, Verdana, Arial;
+		font-size		: 9pt;
+		font-weight		: normal;
+		text-transform	: uppercase;
+		background-color: #ffcc00;
+		padding			: 3px;
+		text-align		: center;
+	}
+	
+	.payCheckHeader
+	{
+		color			: navy;
+		font-family		: Trebuchet MS, Verdana, Arial;
+		font-size		: 9pt;
+		font-weight		: normal;
+		text-transform	: uppercase;
+		background-color: #ffcc00;
+		padding			: 3px;
+		text-align		: center;
+	}
+	
+	.payCheckDataText
+	{
+		color			: black;
+		font-family		: Verdana, Arial;
+		font-size		: 8pt;
+		font-weight		: normal;
+	}
+	
+	.payCheckDataHeading
+	{
+		color			: navy;
+		font-family		: Verdana, Arial;
+		font-size		: 8pt;
+		font-weight		: bold;
+	}
+    
+    .MSGlookupFullname
+    {
+        color			: navy;
+		font-family		: Trebuchet MS, Verdana, Arial;
+		font-size		: 14pt;
+		font-weight		: normal;
+		padding			: 3px;
+    }
+	.buttonLarge 			
+	{
+		font-family		: Trebuchet MS, Verdana, Arial;
+		font-size		: 16pt;
+		color			:MidnightBlue; 
+		background-color:#C4CCE3; 
+		text-decoration:none; 
+		border-style:none; 
+		border-width:0px; 
+		height:28px; 
+		background-image:url(images/etmbbg_noline.gif); 
+		/*padding-left:4px; 
+		padding-right:4px; */
+		vertical-align:top;
+	}
+	.buttonMedium 			
+	{
+		font-family		: Trebuchet MS, Verdana, Arial;
+		font-size		: 16pt;
+		color			:MidnightBlue; 
+		background-color:#C4CCE3; 
+		text-decoration:none; 
+		border-style:none; 
+		border-width:0px; 
+		height:28px; 
+		background-image:url(images/etmbbg_noline.gif); 
+		/*padding-left:4px; 
+		padding-right:4px; */
+		vertical-align:top;
+		cursor:pointer;
+	}
+
+	.buttonAlertMedium 		
+	{ 	height:28px; 
+		font-family:Trebuchet MS; 
+		font-size:16px; 
+		font-weight:normal; 
+		color:white; 
+		background-color:#B42A00; 
+		text-decoration:none; 
+		border-width:1px; 
+		background-image:url(../images/interface/gradButtonAlertSmall.gif); 
+		border-color:#F3A78F #8A594A #8A594A #F3A78F ; 
+		letter-spacing :1; 
+		padding-left:3px; 
+		padding-right:3px; 
+		cursor:pointer;
+		vertical-align:middle; 
+	}
+	
+	.overrideAsterisk
+	{
+	    font-family:Trebuchet MS, Verdana, Arial;
+	    color:blue;
+	    font-size:14pt;
+	}
+    
+    
+    /* ---------------TABLES---------------- */
+	table.generic					{ border-style:solid; border-width:1px; border-color:#004884 }
+	table.pageHeader td 			{ color:#004884; font-size:12pt; text-align:left; font-weight:normal;}
+
+    table.none                      { border-style:none; border-width:0; padding:0; margin:0;}	
+	table.none tr                   { border-style:none; border-width:0; padding:0; margin:0;}	
+	table.none td                   { border-style:none; border-width:0; padding:0; margin:0;}	
+    
+    table.headerTable 				{ border-style:solid; border-color:#004884; border-width:1px 1px 0px 1px; }
+	table.headerTable td 			{ padding-top:2px; padding-right:5px; padding-left:12px; color:#004884; font-size:12pt; font-weight:bold; font-family:Trebuchet MS; }
+	table.headerTable .sortName 	{ float:left; }
+	table.headerTable .sortImage	{ vertical-align:middle; float:right; }
+    
+	table.contentTable              { font-size:12pt; border:1px solid #004884; font-family:Verdana,Arial;}
+
+    td.tfNormal 	                { background-color:#74A3F2; color:white; font-size:8pt; border-style:solid; border-width:1px 0px 0px 0px; border-color:#004884 ; padding:1px; padding-left:4px; padding-right:4px; vertical-align:middle; font-family:Verdana,Arial;}
+    td.tsNormal 	                { background-color:#D4DCF5; color:#000000; font-size:8pt; border-style:solid; border-width:0px 0px 0px 0px; border-color:#004884 #004884; padding:1px; padding-left:2px; padding-right:2px; vertical-align:middle; font-family:Verdana,Arial;}    
+    td.tfHilight                    { background-color:#74A3F2; color:white; font-size:7pt; border-style:solid; border-width:1px 0px 0px 0px; border-color:#004884 ; padding:1px; padding-left:4px; padding-right:4px; vertical-align:middle; font-family:Verdana,Arial;}    
+    td.tsHilight	                { background-color:#D4DCF5; color:#000000; font-size:8pt; border-style:solid; border-width:0px 0px 0px 0px; border-color:#004884 #004884; padding:1px; padding-left:4px; padding-right:4px; vertical-align:middle; font-family:Verdana,Arial;}    
+
+    td.contentTable                 { padding-top:2px; padding-right:5px; padding-left:12px; color:#004884; font-size:12pt; font-weight:bold; font-family:Trebuchet MS; }
+    
+    table.contentTable th           { color:white; background-color:#0061B0; background-image:url(../images/interface/gradTableHeader.gif); font-size:12pt; font-weight:normal; text-align:left; padding:4px; border-style:solid; border-width:1px; border-color:#ADC7F2 #003366 #003366 #ADC7F2 ; font-family:Verdana,Arial;}	
+    th.contentTable                 { color:white; background-color:#0061B0; background-image:url(../images/interface/gradTableHeader.gif); font-size:12pt; font-weight:normal; text-align:left; padding:4px; border-style:solid; border-width:1px; border-color:#ADC7F2 #003366 #003366 #ADC7F2 ; font-family:Verdana,Arial;}	
+	
+    table.contentTable tr.header    { background-color:#74A3F2; }
+    table.contentTable tr.oddRow    { background-color:#FFFDED; }
+	table.contentTable tr.evenRow   { background-color:white; }       
+	
+	
+.inputField { background-color:#D7F2E7; color:#0765B4; font-size:12pt; font-family: Trebuchet MS }
+.textAlert 	{ font-family:Trebuchet MS;color:red; font-size:10pt; }
+
+.linkDark				{ color:#004884;font-size:10pt; text-decoration:none; }
+a:hover.linkDark		{ color:red; 	font-size:10pt; text-decoration:none; }
+	
+.cell{	border-top-width:0;
+			border-left-width:0;
+			border-right-width:0;
+			border-bottom-width:0;
+			
+
+			cursor:pointer;
+			text-decoration:none;	
+			color: white;
+			font-family: Trebuchet MS, Verdana, Arial;
+			font-size: 16pt;			
+	}
+    
+    
+.pageTitle  {padding-left:5px;color:#ffdf2b;font-size:14pt;font-family:verdana;}
+.pageHilite {color:#0061B0;font-size:12pt;font-family:verdana;font-weight:bold;}
+.pageHilite2 {color:#000000;font-size:12pt;font-family:verdana;font-weight:bold;}
+
+.tableInfoHeader    {font-family:Trebuchet MS; font-size:10pt; color:white; background-color:#0061B0;padding:5px;font-weight:bold;}
+.tableColumnHeader  {color:navy;font-family:Trebuchet MS, Verdana, Arial;font-size:9pt;font-weight:normal;text-transform:uppercase;background-color:#ffcc00;padding:3px;}
+.tableTextCell      {color:black;font-family:Arial,Trebuchet MS,Verdana;font-size:8pt;padding:3px;}
+.tableTextRowEven   {background-color: #d7ebff;}
+.tableTextRowOdd    {background-color: whitesmoke;}
+.tableFooterRow     {background-color: #0061B0}
+
+/* ---- Shift Trades ---- */
+.pShiftLbl {background-color:white;font-size:8pt;font-weight:bold;}
+.wShiftLbl {background-color:red;color:white;font-size:8pt;font-weight:bold;}
+
+/* ---- start Availability ---- */
+.boldedLabel { font-family: verdana,Trebuchet MS, Arial; color:black; font-size:10pt; font-weight:bold;}
+.configMsg { font-family: Arial; color:red; font-size:10pt; font-weight:bold;}
+.boldedLabelColHead { font-family:Verdana,Arial; color:white; font-size:8pt; font-weight:bold;}
+
+.availData
+{
+	color			: black;
+	font-family		: Arial;
+	font-size		: 10pt;
+	font-weight		: normal;
+}
+
+.cellDataOvr
+{
+	color			: black;
+	font-family		: Arial;
+	font-size		: 9pt;
+	font-weight		: normal;
+}
+
+.cellDayNumber
+{
+	color			: black;
+	font-family		: Trebuchet MS, Verdana, Arial;
+	font-size		: 9pt;
+	font-weight		: bold;
+	text-align      : left;
+}
+
+table.avTable              { font-size:10pt; border:0px solid #004884; font-family:Verdana,Arial;}
+table.avTable th.calHeader { color:white; background-color:#ffcc00; background-image:url(../images/interface/gradTableHeader.gif); font-size:12pt; font-weight:bold; text-align:center; padding:4px; border-style:solid; border-width:1px; border-color:#ADC7F2 #003366 #003366 #ADC7F2 ; font-family:Verdana,Arial;}
+table.avTable th.colHeader { color:black; background-color:#ffcc00; font-size:11pt; font-weight:normal; text-align:center; padding:2px; border-style:solid; border-width:1px; border-color:#ADC7F2 #003366 #003366 #ADC7F2 ; font-family:Verdana,Arial;}
+
+table.avTable td.calCelAVOver {
+	border				: 2px outset;
+	border-color		: #FFED8A;
+	background-color	: #FFED8A;
+	font-family			: arial;
+	text-align			: left;
+	text-decoration		: none;
+}
+
+table.avTable td.calCelAV {
+	border				: 2px outset;
+	border-color		: #FFFFC3;
+	background-color	: #FFFFC3;
+	font-family			: arial;
+	text-align			: left;
+	text-decoration		: none;
+}
+
+table.avTable td.calCelUAOver {
+	border				: 2px outset;
+	border-color		: #CAD0FF;
+	background-color	: #CAD0FF;
+	font-family			: arial;
+	text-align			: left;
+	text-decoration		: none;
+}
+
+table.avTable td.calCelUA {
+	border				: 2px outset;
+	border-color		: #E8F1FF;
+	background-color	: #E8F1FF;
+    color               : black;
+	font-family			: arial;
+	text-align			: left;
+	text-decoration		: none;
+}
+
+table.avTable td.calCelOutOfScope {
+	border				: 0px;
+	border-color		: white;
+	background-color	: white;
+    color               : black;
+}
+/* ---- end Availability ---- */
+
+/* ---------------POPUP WINDOWS-------------------- */
+#popupCloseWindowLink   {position:absolute;top:0;left:0;float:right;margin:10px;white-space:nowrap;z-index:100;color:white;background-color:#737F8C;font-size:7pt;vertical-align:middle;line-height:13px;}
+#popupCloseWindowLink A {text-decoration:none;color:#FFFFFF}
+#popupCloseWindowLink A:hover {text-decoration:none;color:#FFD988}
+
+/* ----------iframe popup styles---------- */
+.popup {
+	visibility: hidden;
+	position: absolute;
+}
+
+/* ----------Calendar styles---------- */
+.calendarPopup {
+	visibility: hidden;
+	position: absolute;
+}
+
+.calendarDay {
+	border: 1px solid #0000C0;
+	background: #FFE384;
+}
+
+.calendarToday {
+	border: 1px solid #0000C0;
+}
+
+.calendarGrid {
+	border: 1px solid #FFFFFF;
+}
+
+.calendarOut{
+	color: #C0C0C0 !important;
+}
+
