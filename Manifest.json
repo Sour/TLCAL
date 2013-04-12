@@ -20,7 +20,7 @@
 	"https://mytlc.bestbuy.com/etm/time/timesheet/etmTnsMonth.jsp"
   ],
   "browser_action": {
-    "default_icon": "icons/icon.png",
+    "default_icon": "icons/icon128.png",
     "default_popup": "popup.html"
   }
   

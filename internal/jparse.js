@@ -27,18 +27,18 @@ var formatDates = function(){
 	we get splitting to second month.*/
 }
 
-var toArray = function (){
+var splitDays = function (){
 	// (0111:00AM-07:00PML-000359-DEPT50700)
 	console.log("Length of parse: " + parse.length + " number of work days: " + (parse.length / 35));
 	
 	try{
 		for(var i = 0; i < (parse.length / 35); i++){
 			parseArray[i] = parse.substring((i * 35), ((i * 35) + 35));
-			console.log("split portion at coords: " + (i * 35)+ ", "+ ((i * 35) + 35) + " with a result of: " + parse.substring((i * 35), ((i * 35) + 35)));
+			console.log("split: " + (i * 35)+ ", "+ ((i * 35) + 35) + " with a result of: " + parse.substring((i * 35), ((i * 35) + 35)));
 		}
-	}catch(err){
-		console.log("Error in creating array, please check for accuracy");
-	}
+	}catch(err){console.log("Error in creating array, please check for accuracy");}
+	
+	
 }
 
 var initDates = function(){
@@ -106,4 +106,4 @@ var getMonth = function(){
 
 getMonth();
 initDates();
-toArray();
+splitDays();
