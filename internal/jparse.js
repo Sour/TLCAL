@@ -45,9 +45,7 @@ var formatDates = function(){
 	var tempStartTime = "0" + parseArray[i].substring(3,7) + ":00 " + parseArray[i].substring(7,9);
 	var tempEndTime =  "0" + parseArray[i].substring(11,15) + ":00 " + parseArray[i].substring(15,17);
 	
-	console.log(tempDate);
-	console.log(tempStartTime);
-	console.log(tempEndTime);
+	console.log(tempDate + " " + tempStartTime + " " + tempEndTime);
 	
 		// finalArray[i] = date("Work", (month + 1), tempDate, tempStartTime, tempDate, tempEndTime, false, "Work", "BestBuy", false);
 		// console.log("Day created. " +  "Work" + (month + 1) + tempDate + tempStartTime + tempDate + tempEndTime);
@@ -57,8 +55,6 @@ var formatDates = function(){
 
 var splitDays = function (){
 	// (01 11:00AM - 07:00PM L-000359-DEPT50700)
-	console.log("Length of parse: " + parse.length + " number of work days: " + (parse.length / 35));
-	
 	try{
 		for(var i = 0; i < (parse.length / 35); i++){
 			parseArray[i] = parse.substring((i * 35), ((i * 35) + 35));
