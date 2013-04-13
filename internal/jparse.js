@@ -52,9 +52,11 @@ var formatDates = function(){
 
 var splitDays = function (){
 	// (01 11:00AM - 07:00PM L-000359-DEPT50700)
+	console.log(parse);
 	try{
 		for(var i = 0; i < (parse.length / 35); i++){
 			parseArray[i] = parse.substring((i * 35), ((i * 35) + 35));
+			console.log(parseArray[i]);
 		}
 	}catch(err){console.log("Error in creating array, please check for accuracy");}
 	
