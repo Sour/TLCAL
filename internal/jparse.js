@@ -46,9 +46,6 @@ var formatDates = function(){
 	var tempEndTime =  "0" + parseArray[i].substring(11,15) + ":00 " + parseArray[i].substring(15,17);
 	
 	console.log("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false");
-	
-		// finalArray[i] = date("Work", (month + 1), tempDate, tempStartTime, tempDate, tempEndTime, false, "Work", "BestBuy", false);
-		// console.log("Day created. " +  "Work" + (month + 1) + tempDate + tempStartTime + tempDate + tempEndTime);
 	}
 	
 }
