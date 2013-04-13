@@ -6,9 +6,17 @@ var firstDate = 00;
 var month = 0;
 var parse = null;
 var parseArray = [];
+var finalArray = [];
 var daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-function Date(subject,startDate, startTime, endDate, endTime,allDayEvent,description,location,boolPrivate){
+function Date(subject, startDate, startTime, endDate, endTime,allDayEvent,description,location,boolPrivate){
+
+/*
+Subject,Start Date,Start Time,End Date,End Time,All Day Event,Description,Location,Private
+
+Final Exam,05/12/20,07:10:00 PM,05/12/07,10:00:00 PM,False,Two essay questions that will cover topics covered throughout the semester,"Columbia, Schermerhorn 614",True
+*/
+
 	this.subject = subject;
 	this.startDate = startDate;
 	this.startTime = startTime;
@@ -30,23 +38,37 @@ var formatDates = function(){
 	the plan will be to grab things peice by piece and sort them into objects.
 	will want to create the object via day date for now( may cause problems when
 	we get splitting to second month.*/
+	
+	
+	for(var i = 0;i < parseArray.length; i++){
+	var tempDate = "0" + (month + 1) + "/" + parseArray[i].substring(0,2) + "/" + year;
+	var tempStartTime = "0" + parseArray[i].substring(3,7) + ":00 " + parseArray[i].substring(7,9);
+	var tempEndTime =  "0" + parseArray[i].substring(11,15) + ":00 " + parseArray[i].substring(15,17);
+	
+	console.log(tempDate);
+	console.log(tempStartTime);
+	console.log(tempEndTime);
+	
+		// finalArray[i] = date("Work", (month + 1), tempDate, tempStartTime, tempDate, tempEndTime, false, "Work", "BestBuy", false);
+		// console.log("Day created. " +  "Work" + (month + 1) + tempDate + tempStartTime + tempDate + tempEndTime);
+	}
+	
 }
 
 var splitDays = function (){
-	// (0111:00AM-07:00PML-000359-DEPT50700)
+	// (01 11:00AM - 07:00PM L-000359-DEPT50700)
 	console.log("Length of parse: " + parse.length + " number of work days: " + (parse.length / 35));
 	
 	try{
 		for(var i = 0; i < (parse.length / 35); i++){
 			parseArray[i] = parse.substring((i * 35), ((i * 35) + 35));
-			console.log("split: " + (i * 35)+ ", "+ ((i * 35) + 35) + " with a result of: " + parse.substring((i * 35), ((i * 35) + 35)));
 		}
 	}catch(err){console.log("Error in creating array, please check for accuracy");}
 	
 	
 }
 
-var initDates = function(){
+var initParse = function(){
 	var parsePast = ($('td.calendarCellRegularPast').text()).replace(/\s+/g,"");
 	var parseCurrent = ($('td.calendarCellRegularCurrent').text()).replace(/\s+/g,"");
 	var parseFuture = ($('td.calendarCellRegularFuture').text()).replace(/\s+/g,"");
@@ -110,6 +132,6 @@ var getMonth = function(){
 }
 
 getMonth();
-initDates();
+initParse();
 splitDays();
-getShiftStart(parseArray[0]);
+formatDates();
