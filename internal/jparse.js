@@ -21,7 +21,7 @@ function Date(subject, startDate, startTime, endDate, endTime,allDayEvent,descri
 	this.boolPrivate = boolPrivate;
 }
 
-var toCsvFormat = function(){
+var toCSVFormat = function(){
 	
 	for(var i = 0; i < parseArray.length; i++){
 	var tempDate = "0" + (month + 1) + "/" + parseArray[i].substring(0,2) + "/" + year;
@@ -37,7 +37,6 @@ var parseToString = function() {
 	var parseCurrent = ($('td.calendarCellRegularCurrent').text()).replace(/\s+/g,"");
 	var parseFuture = ($('td.calendarCellRegularFuture').text()).replace(/\s+/g,"");
 	parse = parsePast + parseCurrent + parseFuture;
-	console.log(parse);
 	
 	for(var i = 0; i < (parse.length / DAY_LENGTH); i++){
 		
@@ -48,7 +47,6 @@ var parseToString = function() {
 			console.log("spliced: " + parseArray[i]);
 		}else{
 			parseArray[i] = parse.substring((i * (DAY_LENGTH)), ((i * DAY_LENGTH) + DAY_LENGTH));
-			console.log(parseArray[i]);
 		}		
 	}
 }
