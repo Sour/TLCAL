@@ -2,21 +2,14 @@
 var year = $('span.calyeartitle').text();
 var work = $('td.calendarCellRegularPast:first').text();
 
-var firstDate = 00;	
 var month = 0;
+var DAY_LENGTH = 35;
 var parse = null;
 var parseArray = [];
 var finalArray = [];
 var daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 function Date(subject, startDate, startTime, endDate, endTime,allDayEvent,description,location,boolPrivate){
-
-/*
-Subject,Start Date,Start Time,End Date,End Time,All Day Event,Description,Location,Private
-
-Final Exam,05/12/20,07:10:00 PM,05/12/07,10:00:00 PM,False,Two essay questions that will cover topics covered throughout the semester,"Columbia, Schermerhorn 614",True
-*/
-
 	this.subject = subject;
 	this.startDate = startDate;
 	this.startTime = startTime;
@@ -28,59 +21,36 @@ Final Exam,05/12/20,07:10:00 PM,05/12/07,10:00:00 PM,False,Two essay questions t
 	this.boolPrivate = boolPrivate;
 }
 
-var getShiftStart = function(parseDay){
-	console.log(parseDay.substring(3,17));
-	return parseDay.substring(3,17);
-}
-
-var formatDates = function(){
-	/* This is something i will not be able to do without the website being up
-	the plan will be to grab things peice by piece and sort them into objects.
-	will want to create the object via day date for now( may cause problems when
-	we get splitting to second month.*/
+var toCsvFormat = function(){
 	
-	
-	for(var i = 0;i < parseArray.length; i++){
+	for(var i = 0; i < parseArray.length; i++){
 	var tempDate = "0" + (month + 1) + "/" + parseArray[i].substring(0,2) + "/" + year;
 	var tempStartTime = "0" + parseArray[i].substring(3,7) + ":00 " + parseArray[i].substring(7,9);
 	var tempEndTime =  "0" + parseArray[i].substring(11,15) + ":00 " + parseArray[i].substring(15,17);
 	
 	console.log("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false");
 	}
-	
 }
 
-var splitDays = function (){
-	// (01 11:00AM - 07:00PM L-000359-DEPT50700)
-	console.log(parse);
-	try{
-		for(var i = 0; i < (parse.length / 35); i++){
-			parseArray[i] = parse.substring((i * 35), ((i * 35) + 35));
-			console.log(parseArray[i]);
-		}
-	}catch(err){console.log("Error in creating array, please check for accuracy");}
-	
-	
-}
-
-var initParse = function(){
+var parseToString = function() {
 	var parsePast = ($('td.calendarCellRegularPast').text()).replace(/\s+/g,"");
 	var parseCurrent = ($('td.calendarCellRegularCurrent').text()).replace(/\s+/g,"");
 	var parseFuture = ($('td.calendarCellRegularFuture').text()).replace(/\s+/g,"");
+	parse = parsePast + parseCurrent + parseFuture;
+	console.log(parse);
 	
-	if(firstDate === 00 && parsePast.length > 0){
-		firstDate = Number(parsePast.substring(0,2));
-		if(daysPerMonth[month] < (firstDate + 13)){
-			console.log("Next month needs to be loaded");
-		}
-		parse = parsePast + parseCurrent + parseFuture;
-	}else{
-		firstDate = Number(parseCurrent.substring(0,2));		
-		if(daysPerMonth[month] < (firstDate + 13)){
-			console.log("Next month needs to be loaded");
-		}
-		parse = parseCurrent + parseFuture;
-	};
+	for(var i = 0; i < (parse.length / DAY_LENGTH); i++){
+		
+		if(parse.substring((i * DAY_LENGTH) + 2, (i * DAY_LENGTH) + 3) === ":") {
+			var tempParse = parse.slice(0, i * DAY_LENGTH) + parseArray[i-1].substring(0,2) + parse.slice(i * DAY_LENGTH, parse.length);   
+			parse = tempParse;
+			parseArray[i] = parse.substring((i * (DAY_LENGTH)), ((i * DAY_LENGTH) + DAY_LENGTH));
+			console.log("spliced: " + parseArray[i]);
+		}else{
+			parseArray[i] = parse.substring((i * (DAY_LENGTH)), ((i * DAY_LENGTH) + DAY_LENGTH));
+			console.log(parseArray[i]);
+		}		
+	}
 }
 
 var getMonth = function(){
@@ -122,11 +92,11 @@ var getMonth = function(){
 			month = 11;
 			break;
 		default:
+			month = 0;
 			break;
 	};
 }
 
 getMonth();
-initParse();
-splitDays();
-formatDates();
+parseToString();
+toCSVFormat();
