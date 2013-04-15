@@ -2,10 +2,14 @@
 <html>
   <head>
     <title>TLC Settings</title>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	
     <style>
       body {
-        min-width: 357px;
+        min-width: 250px;
+		min-height: 65px;
         overflow-x: hidden;
+		background-color: #d3d3d3;
       }
 
       img {
@@ -16,11 +20,17 @@
         height: 75px;
       }
     </style>
+
     <script src="popup.js"></script>
 	
   </head>
   <body> 
-  <!--
+  <!-- In here possibly somehow just add the login box from mytlc so the browser doesn't have to go there first -->
+  <div id="titletext" style="text-align: center"><span>Best Buy MyTLC</span></div>
+  <br>
+  <a href="https://mytlc.bestbuy.com/etm/" target="_blank">Login</a>
+  
+  <!-- iframe code
   <SCRIPT LANGUAGE="JavaScript">
 	function decideUrl() {
 		// determine which url to go to.
