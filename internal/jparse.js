@@ -36,7 +36,11 @@ var parseToString = function() {
 	var parsePast = ($('td.calendarCellRegularPast').text()).replace(/\s+/g,"");
 	var parseCurrent = ($('td.calendarCellRegularCurrent').text()).replace(/\s+/g,"");
 	var parseFuture = ($('td.calendarCellRegularFuture').text()).replace(/\s+/g,"");
-	parse = parsePast + parseCurrent + parseFuture;
+	if(parseCurrent.substring(2,5) === "OFF"){
+		parse = parsePast + parseFuture;
+	}else{
+		parse = parsePast + parseCurrent + parseFuture;
+	}
 	
 	for(var i = 0; i < (parse.length / DAY_LENGTH); i++){
 		
