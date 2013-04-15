@@ -36,6 +36,7 @@ var parseToString = function() {
 	var parsePast = ($('td.calendarCellRegularPast').text()).replace(/\s+/g,"");
 	var parseCurrent = ($('td.calendarCellRegularCurrent').text()).replace(/\s+/g,"");
 	var parseFuture = ($('td.calendarCellRegularFuture').text()).replace(/\s+/g,"");
+	
 	if(parseCurrent.substring(2,5) === "OFF"){
 		parse = parsePast + parseFuture;
 	}else{
