@@ -26,13 +26,14 @@ var toCSVFormat = function(){
 	
 	for(var i = 0; i < parseArray.length; i++){
 	var tempDate = "0" + (month + 1) + "/" + parseArray[i].substring(0,2) + "/" + year;
-	var tempStartTime = "0" + parseArray[i].substring(3,7) + ":00 " + parseArray[i].substring(7,9);
-	var tempEndTime =  "0" + parseArray[i].substring(11,15) + ":00 " + parseArray[i].substring(15,17);
+	var tempStartTime = parseArray[i].substring(2,7) + ":00 " + parseArray[i].substring(7,9);
+	var tempEndTime =  parseArray[i].substring(10,15) + ":00 " + parseArray[i].substring(15,17);
 	
 	download.append("Subject,Start Date,Start Time,End Date,End Time,All Day Event,Description,Location,Private\n");
 	download.append("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false\n");
+	console.log("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false");
 	}
-	saveAs(download.getBlob("text/plain;charset=iso-8859-15"),"export.csv");
+	//saveAs(download.getBlob("text/plain;charset=iso-8859-15"),"export.csv");
 }
 
 var parseToString = function() {
@@ -45,7 +46,7 @@ var parseToString = function() {
 	}else{
 		parse = parsePast + parseCurrent + parseFuture;
 	}
-	
+	console.log(parse);
 	for(var i = 0; i < (parse.length / DAY_LENGTH); i++){
 		
 		if(parse.substring((i * DAY_LENGTH) + 2, (i * DAY_LENGTH) + 3) === ":") {
@@ -57,6 +58,7 @@ var parseToString = function() {
 			parseArray[i] = parse.substring((i * (DAY_LENGTH)), ((i * DAY_LENGTH) + DAY_LENGTH));
 		}		
 	}
+	console.log(parse);
 }
 
 var getMonth = function(){
