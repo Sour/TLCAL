@@ -29,8 +29,8 @@ var toCSVFormat = function(){
 	var tempStartTime = "0" + parseArray[i].substring(3,7) + ":00 " + parseArray[i].substring(7,9);
 	var tempEndTime =  "0" + parseArray[i].substring(11,15) + ":00 " + parseArray[i].substring(15,17);
 	
-	download.append("Subject,Start Date,Start Time,End Date,End Time,All Day Event,Description,Location,Private ");
-	download.append("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false");
+	download.append("Subject,Start Date,Start Time,End Date,End Time,All Day Event,Description,Location,Private\n");
+	download.append("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false\n");
 	}
 	saveAs(download.getBlob("text/plain;charset=iso-8859-15"),"export.csv");
 }
