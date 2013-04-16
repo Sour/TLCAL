@@ -3,44 +3,72 @@
   <head>
     <title>TLC Settings</title>
 	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-	
     <style>
-      body {
-        min-width: 250px;
-		min-height: 65px;
-        overflow-x: hidden;
-		background-color: #d3d3d3;
-      }
-
-      img {
-        margin: 5px;
-        border: 2px solid black;
-        vertical-align: middle;
-        width: 75px;
-        height: 75px;
-      }
-    </style>
-
-    <script src="popup.js"></script>
 	
+	body {
+		min-width: 500px;
+		min-height: 65px;
+		overflow-x: hidden;
+		background-color: #fff;
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		
+	}
+		
+	h2 {
+		color: #222;
+		text-shadow: 0px 2px 3px #555;
+		font-weight: bold;
+		font-size: 50px;
+		vertical-align: text-top;
+		text-align: center;
+	
+	}
+		
+	a.button {
+	
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight: 300;
+		font-size:30px;
+		color: #222;
+		text-shadow: 0px 2px 3px #555;
+		text-decoration:none;
+		display:block;
+		width:95%;
+		padding:10px;
+		border:1px solid #666;
+		text-align:center;
+		
+		background:#fff;
+		background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#999));
+		background:-moz-linear-gradient(0% 90% 90deg, #fff, #999);
+
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		-o-border-radius:5px;
+		border-radius:5px;
+		
+		-webkit-transition: all .4s ease-in-out;
+		-moz-transition: all .4s ease-in-out;
+		-o-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out;
+	}
+	a.button:hover {
+		color:#666;
+		border-color:#666;
+	}
+	a.button:active {
+		background:#4195DD;
+		background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#003C82), to(#4195DD));
+		background:-moz-linear-gradient(0% 90% 90deg, #4195DD, #003C82);
+	}
+	
+    </style>
   </head>
   <body> 
 
-  <div id="titletext" style="text-align: center"><span>Best Buy MyTLC</span></div>
-  <br>
-  <a href="https://mytlc.bestbuy.com/etm/" target="_blank">MyTLC Login Page</a>
+  <h2>Best Buy TLC</h2>
+  <a href="https://mytlc.bestbuy.com/etm/" class="button" >Login</a>
   
-  <!-- iframe code
-  <SCRIPT LANGUAGE="JavaScript">
-	function decideUrl() {
-		// determine which url to go to.
-	}
-	</SCRIPT>
-	
-	<iframe name="Login" src="https://mytlc.bestbuy.com/etm/" width="750" height="750" marginwidth="10" marginheight="10" scrolling="auto"></iframe>
-    <iframe name="MyTLC" src="https://mytlc.bestbuy.com/etm/time/timesheet/etmTnsMonth.jsp" width="750" height="750" marginwidth="10" marginheight="10" scrolling="auto"></iframe>
-	
-  -->
   </body>
 </html>
 
