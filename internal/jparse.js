@@ -8,6 +8,7 @@ var parse = null;
 var parseArray = [];
 var finalArray = [];
 var daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+var download = new BlobBuilder();
 
 function Date(subject, startDate, startTime, endDate, endTime,allDayEvent,description,location,boolPrivate){
 	this.subject = subject;
@@ -28,8 +29,10 @@ var toCSVFormat = function(){
 	var tempStartTime = "0" + parseArray[i].substring(3,7) + ":00 " + parseArray[i].substring(7,9);
 	var tempEndTime =  "0" + parseArray[i].substring(11,15) + ":00 " + parseArray[i].substring(15,17);
 	
-	console.log("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false");
+	download.append("Subject,Start Date,Start Time,End Date,End Time,All Day Event,Description,Location,Private ");
+	download.append("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false");
 	}
+	saveAs(download.getBlob("text/plain;charset=iso-8859-15"),"export.csv");
 }
 
 var parseToString = function() {

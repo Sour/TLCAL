@@ -3,7 +3,7 @@
 
   "name": "Best Buy TLC Calendar Import",
   "description": "Import the calendar from mytlc.bestbuy.com to Google calendar",
-  "version": "1.0.3",
+  "version": "1.2.1",
   
   "icons": { "16": "icons/icon16.png",
            "48": "icons/icon48.png",
@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "matches": ["https://mytlc.bestbuy.com/etm/time/timesheet/etmTnsMonth.jsp", "file:///C:/Users/Wil/Desktop/GitHub/TLCAL/cached/etmTnsMonth.jsp.htm", "file:///C:/Users/Wil/Desktop/GitHub/TLCAL/cached/Web%20Page/TLC.htm"],
-      "js": ["internal/jquery.js", "internal/jparse.js"]
+      "js": ["internal/jquery.js", "internal/FileSaver.js", "internal/blobBuilder.js", "internal/jparse.js"]
     }
   ],  
   "permissions": [
