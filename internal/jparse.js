@@ -31,9 +31,8 @@ var toCSVFormat = function(){
 	
 	download.append("Subject,Start Date,Start Time,End Date,End Time,All Day Event,Description,Location,Private\n");
 	download.append("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false\n");
-	console.log("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false");
 	}
-	//saveAs(download.getBlob("text/plain;charset=iso-8859-15"),"export.csv");
+	saveAs(download.getBlob("text/plain;charset=iso-8859-15"),"export.csv");
 }
 
 var parseToString = function() {
@@ -46,7 +45,6 @@ var parseToString = function() {
 	}else{
 		parse = parsePast + parseCurrent + parseFuture;
 	}
-	console.log(parse);
 	for(var i = 0; i < (parse.length / DAY_LENGTH); i++){
 		
 		if(parse.substring((i * DAY_LENGTH) + 2, (i * DAY_LENGTH) + 3) === ":") {
@@ -58,7 +56,6 @@ var parseToString = function() {
 			parseArray[i] = parse.substring((i * (DAY_LENGTH)), ((i * DAY_LENGTH) + DAY_LENGTH));
 		}		
 	}
-	console.log(parse);
 }
 
 var getMonth = function(){
