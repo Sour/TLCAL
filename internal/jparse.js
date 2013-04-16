@@ -32,7 +32,7 @@ var toCSVFormat = function(){
 	download.append("Subject,Start Date,Start Time,End Date,End Time,All Day Event,Description,Location,Private\n");
 	download.append("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false\n");
 	}
-	saveAs(download.getBlob("text/plain;charset=iso-8859-15"),"export.csv");
+	saveAs(download.getBlob("text/plain;charset=iso-8859-15"),tempDate + "schedule.csv");
 }
 
 var parseToString = function() {
