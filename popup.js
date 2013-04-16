@@ -6,7 +6,7 @@ var changed = "https://mytlc.bestbuy.com/etm/login.jsp"
 var oldLocation = location.href;
  setInterval(function() {
       if(location.href != oldLocation) {
-           do your action
+           alert("test");
            oldLocation = location.href
       }
   }, 1000); // check every second
