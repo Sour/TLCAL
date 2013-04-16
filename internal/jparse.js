@@ -10,6 +10,17 @@ var finalArray = [];
 var daysPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 var download = new BlobBuilder();
 
+// var injectHTML(){
+	// document.body.insertBefore(iframe, document.body.firstChild);
+	
+	// var button = document.getElementById("mybutton");
+// button.person_name = "Roberto";
+// button.addEventListener("click", function() {
+  // alert(greeting + button.person_name + ".");
+// }, false);
+
+
+// }
 
 var toCSVFormat = function(){
 	
@@ -21,7 +32,7 @@ var toCSVFormat = function(){
 	download.append("Subject,Start Date,Start Time,End Date,End Time,All Day Event,Description,Location,Private\n");
 	download.append("Work," + tempDate + "," + tempStartTime + "," + tempDate + "," + tempEndTime + ",false" + ",Work" + ",BestBuy" + ",false\n");
 	}
-	//saveAs(download.getBlob("text/plain;charset=iso-8859-15"),"export.csv");
+	saveAs(download.getBlob("text/plain;charset=iso-8859-15"),"export.csv");
 }
 
 var parseToString = function() {
@@ -91,6 +102,7 @@ var getMonth = function(){
 	};
 }
 
+// injectHTML();
 getMonth();
 parseToString();
 toCSVFormat();
