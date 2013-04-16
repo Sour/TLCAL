@@ -15,9 +15,11 @@
       "js": ["internal/jquery.js", "internal/FileSaver.js", "internal/blobBuilder.js", "internal/jparse.js"]
     }
   ],  
+  
   "permissions": [
-	"https://mytlc.bestbuy.com/etm/time/timesheet/etmTnsMonth.jsp"
+	"tabs", "http://*/*"
   ],
+  
   "browser_action": {
     "default_icon": "icons/icon128.png",
     "default_popup": "popup.html"
