@@ -8,6 +8,7 @@
 	body {
 		background: #333;
 		color: #888
+		align: top;
 	}
 	
 	input[type=checkbox] {
@@ -18,9 +19,17 @@
 		width: 68px;
 		height: 20px;
 		background: #222;
-		margin: 20px 80px;
+		margin: 20px 10px 20px 150px;
 		position: relative;
 		box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	}
+	
+	.checkboxOne span {
+		position: relative;
+		right: 110px;
+		color: #888;
+		font-size: 16px;
+		font-weight: bold;
 	}
 	
 	.checkboxOne label {
@@ -70,6 +79,7 @@
   </head>
   <body> 
 	<div class="checkboxOne">
+		<span>Reminder: </span>
   		<input type="checkbox" value="1" id="checkboxOne" name="" />
 	  	<label for="checkboxOne"></label>
   	</div>
