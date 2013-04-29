@@ -13,7 +13,7 @@
   "content_scripts": [
     {
       "matches": ["https://mytlc.bestbuy.com/etm/time/timesheet/etmTnsMonth.jsp", "http://www.google.com/robots.txt*"],
-      "js": ["internal/jquery.js", "internal/FileSaver.js", "internal/blobBuilder.js", "external/jparse.js", "oauth2/oauth2_inject.js"]
+      "js": ["internal/jquery.js", "internal/FileSaver.js", "internal/blobBuilder.js", "external/jparse.js"]
     }
   ],  
   
