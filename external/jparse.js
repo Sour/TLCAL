@@ -25,7 +25,7 @@ var download = new BlobBuilder();
 var toCSVFormat = function(){
 	
 	for(var i = 0; i < parseArray.length; i++){
-	var tempDate = "0" + (month + 1) + "/" + parseArray[i].substring(0,2) + "/" + year;
+	var tempDate = month + "/" + parseArray[i].substring(0,2) + "/" + year.substring(2,4);
 	var tempStartTime = parseArray[i].substring(2,7) + ":00 " + parseArray[i].substring(7,9);
 	var tempEndTime =  parseArray[i].substring(10,15) + ":00 " + parseArray[i].substring(15,17);
 	
@@ -61,40 +61,40 @@ var parseToString = function() {
 var getMonth = function(){
 	switch($('span.calMonthTitle').text()){
 		case "January":
-			month = 0;
+			month = 01;
 			break;
 		case "February":
-			month = 1;
+			month = 02;
 			break;
 		case "March":
-			month = 2;
+			month = 03;
 			break;
 		case "April":
-			month = 3;
+			month = 04;
 			break;
 		case "May":
-			month = 4;
+			month = 05;
 			break;
 		case "June":
-			month = 5;
+			month = 06;
 			break;
 		case "July":
-			month = 6;
+			month = 07;
 			break;
 		case "August":
-			month = 7;
+			month = 08;
 			break;
 		case "September":
-			month = 8;
+			month = 09;
 			break;
 		case "October":
-			month = 9;
-			break;
-		case "November":
 			month = 10;
 			break;
-		case "December":
+		case "November":
 			month = 11;
+			break;
+		case "December":
+			month = 12;
 			break;
 		default:
 			month = 0;
